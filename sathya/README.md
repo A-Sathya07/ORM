@@ -22,28 +22,26 @@ Execute Django admin and create details for 10 books
 admin.py 
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Car_Inventory, Car_InventoryAdmin
+admin.site.register(Car_Inventory, Car_InventoryAdmin)
+
 
 models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
+class  Car_Inventory(models.Model):
+    Plate_No = models.CharField(max_length=20, primary_key=True)
+    Car_Manufacturer = models.CharField(max_length=15)
+    Car_Model = models.CharField(max_length=100)
+    Car_Color = models.CharField(max_length=20)
+    Mileage = models.IntegerField( )
 
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
-
-
-
+class Car_InventoryAdmin(admin.ModelAdmin):
+    	list_display = ('Plate_No', 'Car_Manufacturer','Car_Model', 'Car_Color', 'Mileage')
 """
 # OUTPUT
-![alt text](<Screenshot 2025-09-20 114829.png>)
+![alt text](<Screenshot 2025-09-21 232042.png>)
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
