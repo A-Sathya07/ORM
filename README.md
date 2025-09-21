@@ -18,7 +18,7 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 # PROGRAM
-'''
+```
 
 admin.py 
 
@@ -41,7 +41,7 @@ class  Car_Inventory(models.Model):
 class Car_InventoryAdmin(admin.ModelAdmin):
     	list_display = ('Plate_No', 'Car_Manufacturer','Car_Model', 'Car_Color', 'Mileage')
      
-'''
+```
 # OUTPUT
 ![alt text](<Screenshot 2025-09-21 232042.png>)
 
